@@ -1,0 +1,87 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  touch-action: pan-y;
+  border-radius: 0.5rem;
+
+  .carouselInner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+
+    .slide {
+      min-width: 100%;
+      height: 20rem;
+      transition: all 0.5s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .leftArrow,
+  .rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .leftArrow:hover,
+  .rightArrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .leftArrow {
+    left: 1rem;
+  }
+
+  .rightArrow {
+    right: 1rem;
+  }
+
+  .carouselIndicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+
+    .carouselIndicator {
+      width: 10px;
+      height: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #f9a2a2;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    display: none;
+  }
+}

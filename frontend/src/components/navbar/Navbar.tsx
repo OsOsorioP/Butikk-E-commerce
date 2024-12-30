@@ -28,10 +28,10 @@ export const Navbar = () => {
                 <Toolbar>
                     <img src={Logo} alt="logo" loading='lazy' width={50} style={{ filter: "drop-shadow(0 0 2px rgba(74,74,74,0.3))" }} />
                     <Typography
-                        variant='h6'
+                        variant='h1'
                         component={NavLink}
                         to={"/"}
-                        sx={{ fontSize: '1.5rem', color: 'inherit', textDecoration: 'none', margin: '0 10px', "&:hover": { textDecoration: 'underline' }, fontWeight: 'bold' }}
+                        sx={{ color: 'inherit', textDecoration: 'none', margin: '0 10px', "&:hover": { textDecoration: 'underline' } }}
 
                     >
                         Butikk
@@ -42,7 +42,7 @@ export const Navbar = () => {
                     {navLinks.map((link, index) => (
                         <Typography
                             key={index}
-                            variant='h6'
+                            variant='h5'
                             component={NavLink}
                             to={link.path}
                             sx={{ color: 'inherit', textDecoration: 'none', margin: '0 10px', "&:hover": { textDecoration: 'underline' }, display: { xs: 'none', sm: 'flex' } }}
@@ -58,6 +58,7 @@ export const Navbar = () => {
                             size="medium"
                             color="inherit"
                             icon={button.icon}
+                            sx={{ border:"1px solid #777777", borderRadius:"30%", margin: '0 5px'}}
                         />
                     ))}
 
@@ -66,7 +67,7 @@ export const Navbar = () => {
                         color="inherit"
                         onClick={() => setOpen(true)}
                         icon={<MenuIcon />}
-                        sx={{ display: { xs: 'flex', sm: 'none' } }}
+                        sx={{ display: { xs: 'flex', sm: 'none' }}}
                     />
                 </Toolbar>
             </AppBar>

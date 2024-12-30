@@ -11,3 +11,7 @@ body {
   font-family: 'Blinker', sans-serif;
   position: relative;
 }
+
+html {
+  font-size: 62.5%;
+}

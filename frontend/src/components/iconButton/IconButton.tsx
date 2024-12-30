@@ -5,7 +5,7 @@ export interface IconButtonProps {
     size?: 'small' | 'medium' | 'large';
     color?: 'inherit' | 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
     icon?: JSX.Element;
-    sx?: {};
+    sx?:  {};
     onClick?: () => void;
 }
 
